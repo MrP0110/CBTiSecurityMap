@@ -1,0 +1,76 @@
+library(shiny); source('D:/DescargasV/Version 2.4/Version 2.4/mnx.R')
+runApp('D:/DescargasV/Version 2.4/Version 2.4')
+library(rvest)
+url <- 'http://books.toscrape.com/catalogue/category/books/travel_2/index.html'
+titles <- read_html(url) %>%
+html_nodes('h3') %>%
+html_nodes('a') %>%
+html_text()
+titles
+url <- 'https://www.gandhi.com.mx/libros/novedades'
+titles <- read_html(url) %>%
+html_nodes('a') %>%
+html_text()
+titles
+url <- 'https://www.gandhi.com.mx/libros/novedades'
+titles <- read_html(url) %>%
+html_nodes('h3') %>%
+html_nodes('a') %>%
+html_text()
+titles
+url <- 'https://www.gandhi.com.mx/libros/novedades'
+titles <- read_html(url) %>%
+html_nodes('strong') %>%
+html_nodes('a') %>%
+html_text()
+titles
+url <- 'https://www.gandhi.com.mx/libros/novedades'
+titles <- read_html(url) %>%
+html_nodes('strong class="product name product-item-name") %>%
+html_nodes('a') %>%
+html_text()
+url <- 'http://www.siseems.sems.gob.mx/produccion/protected/pages/control/certificacion/certificado_digital/certificadoDigitalV3.php?id_alumno=Vkd0U1RrNVZNVlZWV0d4T1VWUXdPUT09&accion=revisadatos&id_subsistema=611&id_rol=500'
+titles <- read_html(url) %>%
+html_nodes('embed') %>%
+html_text()
+titles
+url
+library(XML)
+library(RCurl)
+url <- "https://www.bot.or.th/English/MonetaryPolicy/Northern/EconomicReport/Pages/Releass_Economic_north.aspx"
+page   <- getURL(url)
+parsed <- htmlParse(page)
+links  <- xpathSApply(parsed, path="//a", xmlGetAttr, "href")
+inds   <- grep("*.pdf", links)
+links  <- links[inds]
+install.packages("RCurl")
+library(XML)
+library(RCurl)
+url <- "https://www.bot.or.th/English/MonetaryPolicy/Northern/EconomicReport/Pages/Releass_Economic_north.aspx"
+page   <- getURL(url)
+parsed <- htmlParse(page)
+links  <- xpathSApply(parsed, path="//a", xmlGetAttr, "href")
+inds   <- grep("*.pdf", links)
+links  <- links[inds]
+setwd("D:/DescargasV/MapaJ1/MapaJ1")
+library(shiny); source('mnx.R')
+runApp()
+runApp()
+runApp()
+runApp()
+source('mnx.R')
+runApp()
+source('mnx.R')
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+runApp()
+source('mnx.R')
+source('mnx.R')
